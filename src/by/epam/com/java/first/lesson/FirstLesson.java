@@ -58,15 +58,24 @@ public class FirstLesson {
         if (scanner.hasNextInt()){
             a = scanner.nextInt();
         }
+            else {System.out.println("Please type an integer value. Re-run program and try again!");
+                return;
+        }
 
         System.out.println("Enter integer b: ");
         if (scanner.hasNextInt()){
             b = scanner.nextInt();
         }
+            else {System.out.println("Please type an integer value. Re-run program and try again!");
+                return;
+        }
 
         System.out.println("Enter integer c: ");
         if (scanner.hasNextInt()){
             c = scanner.nextInt();
+        }
+            else {System.out.println("Please type an integer value. Re-run program and try again!");
+                return;
         }
 
         double result = (a*a)-(b-c)*(b-c)+log1p(b*b+1);
@@ -80,7 +89,7 @@ public class FirstLesson {
             System.out.println("Сумма b+c: " + sum);
         }
         if (a == b){
-            System.out.println("Конец");
+            System.out.println(a + " is equals" + b + " Конец");
         }
         if (a < b){
             int sum = a+b+c;
