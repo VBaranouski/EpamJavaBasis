@@ -1,4 +1,4 @@
-package by.epam.com.java.first.lesson;
+package by.epam.com.java.lesson.first;
 
 import java.util.Scanner;
 
@@ -7,11 +7,11 @@ import static java.lang.Math.log1p;
 
 public class FirstLessonPartOne {
 
-    public static void showHelloWorld(){
+    public static void showHelloWorld() {
         System.out.println("Hello World!");
     }
 
-    public static void showPersonalInfo(){
+    public static void showPersonalInfo() {
         String firstLastName = "Uladzislau Baranouski ";
         String location = "N186";
         String phoneNumber = " 44-7750863";
@@ -19,7 +19,7 @@ public class FirstLessonPartOne {
         System.out.println(firstLastName + location + phoneNumber);
     }
 
-    public static void showBookText(){
+    public static void showBookText() {
 
         String text = "Пройдет много лет, и полковник Аурелиано Буэндиа, " +
                 "стоя у стены в ожидании расстрела, вспомнит тот далекий вечер, " +
@@ -30,26 +30,26 @@ public class FirstLessonPartOne {
         System.out.println(text + "\n");
     }
 
-    public static void squareOfightTriangle(int a, int b){
+    public static void squareOfRightTriangle(int a, int b) {
 
-        double square = (a*b)/2;
+        double square = (a * b) / 2;
         System.out.println("Площадь: " + square);
     }
 
-    public static void calculateHypotenuse(int a, int b){
+    public static void calculateHypotenuse(int a, int b) {
 
-        double hypotenuse = hypot(a,b);
+        double hypotenuse = hypot(a, b);
         System.out.println("Гипотенуза: " + hypotenuse + "\n");
     }
 
-    public static void calculateSumOfFourth(int a, int b, int c, int d){
+    public static void calculateSumOfFourth(int a, int b, int c, int d) {
 
-        int sum = a+b+c+d;
+        int sum = a + b + c + d;
         System.out.println("Сумма четырех чисел: " + sum + "\n");
 
     }
 
-    public static void calculateExpression(){
+    public static void calculateExpression() {
 
         Scanner scanner = new Scanner(System.in);
         int a;
@@ -58,44 +58,42 @@ public class FirstLessonPartOne {
 
         System.out.println("Enter integer a: ");
 
-        if (scanner.hasNextInt()){
+        if (scanner.hasNextInt()) {
             a = scanner.nextInt();
-        }
-            else {System.out.println("Please type an integer value. Re-run program and try again!");
-                return;
+        } else {
+            System.out.println("Please type an integer value. Re-run program and try again!");
+            return;
         }
 
         System.out.println("Enter integer b: ");
-        if (scanner.hasNextInt()){
+        if (scanner.hasNextInt()) {
             b = scanner.nextInt();
-        }
-            else {System.out.println("Please type an integer value. Re-run program and try again!");
-                return;
+        } else {
+            System.out.println("Please type an integer value. Re-run program and try again!");
+            return;
         }
 
         System.out.println("Enter integer c: ");
-        if (scanner.hasNextInt()){
+        if (scanner.hasNextInt()) {
             c = scanner.nextInt();
-        }
-            else {System.out.println("Please type an integer value. Re-run program and try again!");
-                return;
+        } else {
+            System.out.println("Please type an integer value. Re-run program and try again!");
+            return;
         }
 
-        double result = (a*a)-(b-c)*(b-c)+log1p(b*b+1);
+        double result = (a * a) - (b - c) * (b - c) + log1p(b * b + 1);
         System.out.println("Результат: " + result);
     }
 
     public static void newYear(int a, int b, int c) {
 
-        if (a > b){
-            int sum = b+c;
+        if (a > b) {
+            int sum = b + c;
             System.out.println("\n" + "Сумма b+c: " + sum);
-        }
-        if (a == b){
+        } else if (a == b) {
             System.out.println("\n" + a + " is equals " + b + ": Конец");
-        }
-        if (a < b){
-            int sum = a+b+c;
+        } else {
+            int sum = a + b + c;
             System.out.println("\n" + "Сумма: " + sum + " - " + "New Year!!");
         }
     }
