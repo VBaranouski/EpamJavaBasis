@@ -1,19 +1,27 @@
 package by.epam.com.java;
 
-import by.epam.com.java.first.lesson.FirstLesson;
+import by.epam.com.java.first.lesson.FirstLessonPartOne;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        FirstLesson.showHelloWorld();
-        FirstLesson.showPersonalInfo();
-        FirstLesson.showBookText();
-        FirstLesson.calculateHypotenuse(3, 4);
-        FirstLesson.squareOfightTriangle(5, 4);
-        FirstLesson.calculateSumOfFourth(1,2,3,4);
-        FirstLesson.calculateExpression();
-        FirstLesson.newYear(4,4,5);
+        FirstLessonPartOne.showHelloWorld();
+
+        FirstLessonPartOne.showPersonalInfo();
+
+        FirstLessonPartOne.showBookText();
+
+        FirstLessonPartOne.calculateHypotenuse(3, 4);
+
+        FirstLessonPartOne.squareOfightTriangle(5, 4);
+
+        FirstLessonPartOne.calculateSumOfFourth(1,2,3,4);
+
+        FirstLessonPartOne.calculateExpression();
+
+        FirstLessonPartOne.newYear(4,4,5);
+
 
     }
 

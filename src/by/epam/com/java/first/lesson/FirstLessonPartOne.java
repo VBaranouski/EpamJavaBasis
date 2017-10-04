@@ -5,7 +5,7 @@ import java.util.Scanner;
 import static java.lang.Math.hypot;
 import static java.lang.Math.log1p;
 
-public class FirstLesson {
+public class FirstLessonPartOne {
 
     public static void showHelloWorld(){
         System.out.println("Hello World!");
@@ -82,7 +82,7 @@ public class FirstLesson {
         }
 
         double result = (a*a)-(b-c)*(b-c)+log1p(b*b+1);
-        System.out.println(result);
+        System.out.println("Результат: " + result);
     }
 
     public static void newYear(int a, int b, int c) {
