@@ -15,17 +15,19 @@ public class FirstLesson {
         String firstLastName = "Uladzislau Baranouski ";
         String location = "N186";
         String phoneNumber = " 44-7750863";
+
         System.out.println(firstLastName + location + phoneNumber);
     }
 
     public static void showBookText(){
+
         String text = "Пройдет много лет, и полковник Аурелиано Буэндиа, " +
                 "стоя у стены в ожидании расстрела, вспомнит тот далекий вечер, " +
                 "когда отец взял его с собой посмотреть на лед. Макондо было тогда " +
                 "небольшим селением с двумя десятками хижин, выстроенных из глины " +
                 "и бамбука на берегу реки, которая мчала свои прозрачные воды ... ";
 
-        System.out.println(text);
+        System.out.println(text + "\n");
     }
 
     public static void squareOfightTriangle(int a, int b){
@@ -35,23 +37,24 @@ public class FirstLesson {
     }
 
     public static void calculateHypotenuse(int a, int b){
+
         double hypotenuse = hypot(a,b);
-        System.out.println("Гипотенуза: " + hypotenuse);
+        System.out.println("Гипотенуза: " + hypotenuse + "\n");
     }
 
     public static void calculateSumOfFourth(int a, int b, int c, int d){
 
         int sum = a+b+c+d;
-        System.out.println("Сумма четырех чисел: " + sum);
+        System.out.println("Сумма четырех чисел: " + sum + "\n");
 
     }
 
     public static void calculateExpression(){
 
         Scanner scanner = new Scanner(System.in);
-        int a = 0;
-        int b = 0;
-        int c = 0;
+        int a;
+        int b;
+        int c;
 
         System.out.println("Enter integer a: ");
 
@@ -86,14 +89,14 @@ public class FirstLesson {
 
         if (a > b){
             int sum = b+c;
-            System.out.println("Сумма b+c: " + sum);
+            System.out.println("\n" + "Сумма b+c: " + sum);
         }
         if (a == b){
-            System.out.println(a + " is equals" + b + " Конец");
+            System.out.println("\n" + a + " is equals " + b + ": Конец");
         }
         if (a < b){
             int sum = a+b+c;
-            System.out.println("Сумма: " + sum + " - " + "New Year!!");
+            System.out.println("\n" + "Сумма: " + sum + " - " + "New Year!!");
         }
     }
 
