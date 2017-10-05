@@ -7,11 +7,11 @@ import static java.lang.Math.log1p;
 
 public class FirstLessonPartOne {
 
-    public static void showHelloWorld() {
+    public void showHelloWorld() {
         System.out.println("Hello World!");
     }
 
-    public static void showPersonalInfo() {
+    public void showPersonalInfo() {
         String firstLastName = "Uladzislau Baranouski ";
         String location = "N186";
         String phoneNumber = " 44-7750863";
@@ -19,7 +19,7 @@ public class FirstLessonPartOne {
         System.out.println(firstLastName + location + phoneNumber);
     }
 
-    public static void showBookText() {
+    public void showBookText() {
 
         String text = "Пройдет много лет, и полковник Аурелиано Буэндиа, " +
                 "стоя у стены в ожидании расстрела, вспомнит тот далекий вечер, " +
@@ -30,26 +30,26 @@ public class FirstLessonPartOne {
         System.out.println(text + "\n");
     }
 
-    public static void squareOfRightTriangle(int a, int b) {
+    public void squareOfRightTriangle(int a, int b) {
 
         double square = (a * b) / 2;
         System.out.println("Площадь: " + square);
     }
 
-    public static void calculateHypotenuse(int a, int b) {
+    public void calculateHypotenuse(int a, int b) {
 
         double hypotenuse = hypot(a, b);
         System.out.println("Гипотенуза: " + hypotenuse + "\n");
     }
 
-    public static void calculateSumOfFourth(int a, int b, int c, int d) {
+    public void calculateSumOfFourth(int a, int b, int c, int d) {
 
         int sum = a + b + c + d;
         System.out.println("Сумма четырех чисел: " + sum + "\n");
 
     }
 
-    public static void calculateExpression() {
+    public void calculateExpression() {
 
         Scanner scanner = new Scanner(System.in);
         int a;
@@ -85,7 +85,7 @@ public class FirstLessonPartOne {
         System.out.println("Результат: " + result);
     }
 
-    public static void newYear(int a, int b, int c) {
+    public void newYear(int a, int b, int c) {
 
         if (a > b) {
             int sum = b + c;
