@@ -103,6 +103,7 @@ public class FirstLessonPartTwo {
     }
 
     public static void calculateExpressions(double a, double b, double c, double d) {
+
         if (a != 0 && c != 0 && d != 0) {
             double resultA = (b + Math.sqrt(Math.pow(b, 2)) + 4 * a * b) / 2 * a - Math.pow(a, 3) * c + b;
             double resultB = (a * b) / (c * d) - (a * b - c) / (c * d);
