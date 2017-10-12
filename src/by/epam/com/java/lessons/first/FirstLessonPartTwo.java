@@ -1,4 +1,4 @@
-package by.epam.com.java.lesson.first;
+package by.epam.com.java.lessons.first;
 
 import java.util.Random;
 import java.util.Scanner;
