@@ -1,4 +1,4 @@
-package by.epam.com.java.lesson.first;
+package by.epam.com.java.lessons.first;
 
 import java.util.Scanner;
 
@@ -51,11 +51,9 @@ public class FirstLessonPartOne {
 
     public void calculateExpression() {
 
-        Scanner scanner = new Scanner(System.in);
         int a;
-        int b;
-        int c;
 
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter integer a: ");
 
         if (scanner.hasNextInt()) {
@@ -65,6 +63,8 @@ public class FirstLessonPartOne {
             return;
         }
 
+        int b;
+
         System.out.println("Enter integer b: ");
         if (scanner.hasNextInt()) {
             b = scanner.nextInt();
@@ -72,6 +72,8 @@ public class FirstLessonPartOne {
             System.out.println("Please type an integer value. Re-run program and try again!");
             return;
         }
+
+        int c;
 
         System.out.println("Enter integer c: ");
         if (scanner.hasNextInt()) {
