@@ -3,12 +3,14 @@ package by.epam.com.java;
 import by.epam.com.java.lessons.first.FirstLessonPartOne;
 import by.epam.com.java.lessons.first.FirstLessonPartTwo;
 import by.epam.com.java.lessons.second.LessonTwoPartOne;
+import by.epam.com.java.lessons.second.LessonTwoPartTwo;
 
-public class Main {
+public class Runner {
 
     static FirstLessonPartOne fLPartOne;
     static FirstLessonPartTwo fLPartTwo;
     static LessonTwoPartOne lTPartOne;
+    static LessonTwoPartTwo lTPartTwo;
 
     public static void main(String[] args) {
 /*
@@ -40,10 +42,18 @@ public class Main {
         fLPartTwo.gettingFunctionValues(2.1, 9, 1.2);  // 8 Составить программу для вычисления значений функции...
         fLPartTwo.calculateCircle(10.2);   // 9 Вычислить длину окружности и площадь...
         fLPartTwo.calculateFunction(2);    // 10 Вычислить щначение функции...
-*/
+
         // <---- Lesson two part one ---->
 
-        lTPartOne.sumAndCompUsingMethods();  //Решите задачу, находящую сумму и произведение двух чисел с использованием методов..
+        // lTPartOne.sumAndCompUsingMethods();  //Решите задачу, находящую сумму и произведение двух чисел с использованием методов..
+   */
+
+        // <---- Lesson two part two ---->
+
+        lTPartTwo.daysChecker();  // 2. Перепишите код из листинка l2-2 используя методы. 4. Перепишите код, получившийся в предыдушем примере с помощью операторов if.
+        lTPartTwo.arrayCreator(5); // 7. Создайте одномерный массив вещественных чисел. Min/Max/Sorting
+
+
     }
 
 }
