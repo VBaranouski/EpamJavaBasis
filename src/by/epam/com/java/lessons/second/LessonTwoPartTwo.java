@@ -83,7 +83,7 @@ public class LessonTwoPartTwo {
         return numDays;
     }
 
-                              //<---- Arrays ---->
+    //<---- Arrays ---->
 
     public static void arrayCreator(int arraySize) {
         int[] array = new int[arraySize];
@@ -109,6 +109,7 @@ public class LessonTwoPartTwo {
                 max = arr[i];
             }
         }
+
         System.out.println("Максимальное значение: " + max);
 
     }
