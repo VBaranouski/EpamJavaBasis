@@ -1,16 +1,18 @@
 package by.epam.com.java;
 
-import by.epam.com.java.lessons.first.FirstLessonPartOne;
-import by.epam.com.java.lessons.first.FirstLessonPartTwo;
+import by.epam.com.java.lessons.first.LessonOnePartOne;
+import by.epam.com.java.lessons.first.LessonOnePartTwo;
 import by.epam.com.java.lessons.second.LessonTwoPartOne;
 import by.epam.com.java.lessons.second.LessonTwoPartTwo;
+import by.epam.com.java.lessons.third.LessonThreePartOne;
 
 public class Runner {
 
-    static FirstLessonPartOne fLPartOne;
-    static FirstLessonPartTwo fLPartTwo;
+    static LessonOnePartOne fLPartOne;
+    static LessonOnePartTwo fLPartTwo;
     static LessonTwoPartOne lTPartOne;
     static LessonTwoPartTwo lTPartTwo;
+    static LessonThreePartOne lThreePartOne;
 
     public static void main(String[] args) {
 /*
@@ -45,15 +47,18 @@ public class Runner {
 
         // <---- Lesson two part one ---->
 
-        // lTPartOne.sumAndCompUsingMethods();  //Решите задачу, находящую сумму и произведение двух чисел с использованием методов..
-   */
+        lTPartOne.sumAndCompUsingMethods();  //Решите задачу, находящую сумму и произведение двух чисел с использованием методов..
 
         // <---- Lesson two part two ---->
 
         lTPartTwo.dayCountChecker();  // 2. Перепишите код из листинка l2-2 используя методы. 4. Перепишите код, получившийся в предыдушем примере с помощью операторов if.
         lTPartTwo.seasonChecker();  // 3. Введите номер месяца как строку, с помощью valueOf переведите ее в элемент перечисления
         lTPartTwo.arrayCreator(5); // 7. Создайте одномерный массив вещественных чисел. Min/Max/Sorting
+*/
+        // <---- Lesson three part one ---->
 
+        lThreePartOne.sumOfSpecificArrayElements(10,
+                5); // 1. В массив A [N] занесены натуральные числа. Найти сумму тех элементов, которые кратны данному К
 
     }
 
