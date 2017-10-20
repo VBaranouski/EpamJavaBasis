@@ -5,7 +5,7 @@ import java.util.Scanner;
 import static java.lang.Math.hypot;
 import static java.lang.Math.log1p;
 
-public class FirstLessonPartOne {
+public class LessonOnePartOne {
 
     public void showHelloWorld() {
         System.out.println("Hello World!");

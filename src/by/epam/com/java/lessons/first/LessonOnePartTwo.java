@@ -3,7 +3,7 @@ package by.epam.com.java.lessons.first;
 import java.util.Random;
 import java.util.Scanner;
 
-public class FirstLessonPartTwo {
+public class LessonOnePartTwo {
 
     public static void intOperations() {
         Scanner scanner = new Scanner(System.in);
