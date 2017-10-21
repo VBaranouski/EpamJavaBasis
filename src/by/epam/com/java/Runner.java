@@ -60,6 +60,8 @@ public class Runner {
         lThreePartOne.sumOfSpecificArrayElements(10,
                 5); // 1. В массив A [N] занесены натуральные числа. Найти сумму тех элементов, которые кратны данному К
 
+        lThreePartOne.arrayFromZeroValues(
+                15); // 2. В целочисленной последовательности есть нулевые элементы. Создать массив из номеров этих элементов.
     }
 
 }
