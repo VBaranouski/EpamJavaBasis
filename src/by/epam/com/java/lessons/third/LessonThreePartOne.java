@@ -41,7 +41,7 @@ public class LessonThreePartOne {
         }
 
         int[] zeroBasedArray = new int[zeroValueCount];
-        System.out.println("\n" + "New array: ");
+        System.out.println("\n" + "New array with indexes of zero values in initial array: ");
         int j = 0;
 
         for (int i = 0; i < initialArray.length; i++) {
@@ -51,6 +51,65 @@ public class LessonThreePartOne {
             }
 
         }
+    }
+
+    public static void ascendingArray(int arraySize) {
+        int[] array = new int[arraySize];
+        int counter = 0;
+
+        Random random = new Random();
+        for (int i = 0; i < array.length; i++) {
+            array[i] = random.nextInt(20) - 10;
+            System.out.print(array[i] + ", ");
+        }
+        for (int i = 0; i < array.length - 1; i++) {
+            if (array[i] < array[i + 1]) {
+                counter++;
+            }
+        }
+
+        if (counter == arraySize - 1) {
+            System.out.println(" - Ascending");
+        }
+        if (counter == 0) {
+            System.out.println(" - Descending");
+        }
+
+    }
+
+    public static void arrayFromEvenNumbers(int initialArraySize) {
+        int[] initialArray = new int[initialArraySize];
+        int evenNumbersCount = 0;
+
+        Random random = new Random();
+        for (int i = 0; i < initialArray.length; i++) {
+            initialArray[i] = random.nextInt(30);
+            System.out.print(initialArray[i] + ", ");
+        }
+        for (int i = 0; i < initialArray.length - 1; i++) {
+            int reminder = initialArray[i] % 2;
+            if (reminder == 0) {
+                evenNumbersCount++;
+            }
+        }
+
+        if (evenNumbersCount != 0) {
+            int[] evenNumbersArray = new int[evenNumbersCount];
+            System.out.println("\n" + "New array with even numbers: ");
+            int j = 0;
+
+            for (int i = 0; i < initialArray.length; i++) {
+                int reminder = initialArray[i] % 2;
+                if (reminder == 0) {
+                    evenNumbersArray[j] = initialArray[i];
+                    System.out.print(evenNumbersArray[j] + ", ");
+                }
+            }
+
+        } else {
+            System.out.println("Initial array doesn't have even numbers");
+        }
+
     }
 
 }

@@ -15,7 +15,7 @@ public class Runner {
     static LessonThreePartOne lThreePartOne;
 
     public static void main(String[] args) {
-/*
+
         int sum = 0;
         for (int i = 0; i < args.length; i++) {
             int value = Integer.parseInt(args[i]);
@@ -51,17 +51,20 @@ public class Runner {
 
         // <---- Lesson two part two ---->
 
-        lTPartTwo.dayCountChecker();  // 2. Перепишите код из листинка l2-2 используя методы. 4. Перепишите код, получившийся в предыдушем примере с помощью операторов if.
+        lTPartTwo.dayCountChecker();  // 2. Перепишите код из листинка l2-2 используя методы. 4. Перепишите код с помощью операторов if.
         lTPartTwo.seasonChecker();  // 3. Введите номер месяца как строку, с помощью valueOf переведите ее в элемент перечисления
         lTPartTwo.arrayCreator(5); // 7. Создайте одномерный массив вещественных чисел. Min/Max/Sorting
-*/
+
         // <---- Lesson three part one ---->
 
         lThreePartOne.sumOfSpecificArrayElements(10,
                 5); // 1. В массив A [N] занесены натуральные числа. Найти сумму тех элементов, которые кратны данному К
-
         lThreePartOne.arrayFromZeroValues(
                 15); // 2. В целочисленной последовательности есть нулевые элементы. Создать массив из номеров этих элементов.
+        lThreePartOne.ascendingArray(
+                3); //3 Дана последовательность действительных чисел а1 а2 ,..., аn . Выяснить, будет ли она возрастающей.
+        lThreePartOne.arrayFromEvenNumbers(
+                10); //4 Дана последовательность натуральных чисел а1 , а2 ,..., ап. Создать массив из четных чисел этой последовательности. Если таких чисел нет, то вывести сообщение об этом факте.
     }
 
 }
