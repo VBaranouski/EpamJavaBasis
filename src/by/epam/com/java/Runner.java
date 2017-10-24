@@ -5,6 +5,8 @@ import by.epam.com.java.lessons.first.LessonOnePartTwo;
 import by.epam.com.java.lessons.second.LessonTwoPartOne;
 import by.epam.com.java.lessons.second.LessonTwoPartTwo;
 import by.epam.com.java.lessons.third.LessonThreePartOne;
+import by.epam.com.java.lessons.third.LessonThreePartTwo.Fraction;
+import by.epam.com.java.lessons.third.LessonThreePartTwo.Group;
 
 public class Runner {
 
@@ -13,6 +15,7 @@ public class Runner {
     static LessonTwoPartOne lTPartOne;
     static LessonTwoPartTwo lTPartTwo;
     static LessonThreePartOne lThreePartOne;
+
 
     public static void main(String[] args) {
 
@@ -65,6 +68,18 @@ public class Runner {
                 3); //3 Дана последовательность действительных чисел а1 а2 ,..., аn . Выяснить, будет ли она возрастающей.
         lThreePartOne.arrayFromEvenNumbers(
                 10); //4 Дана последовательность натуральных чисел а1 , а2 ,..., ап. Создать массив из четных чисел этой последовательности. Если таких чисел нет, то вывести сообщение об этом факте.
+
+
+         // <---- Lesson three part two ---->
+
+         Fraction fraction = new Fraction();  //1. Определить класс «Дробь» в виде пары m/n. Объявить массив из k дробей, ввести/вывести значения для массива дробей.
+         fraction.createFractionArray(10);  // Note: Дроби заполняются через Random
+
+         Group group = new Group(); // 2. Определить: а) средний балл учебной группы (использовать класс Group); ...
+         group.createStudentsGroup(); // .. б) средний балл каждого студента; в) число отличников; ...
+         group.calculateBadAndGoodStudents();  // ... количество студентов, имеющих "2"
     }
 
+
 }
+
