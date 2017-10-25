@@ -6,6 +6,7 @@ import java.util.List;
 public class Group {
 
     private static int averageGroupMark;
+    private int studentsCount;
 
     public int getStudentsCount() {
         return studentsCount;
@@ -14,8 +15,6 @@ public class Group {
     public void setStudentsCount(int studentsCount) {
         this.studentsCount = studentsCount;
     }
-
-    private int studentsCount = 6;
 
     public static int getAverageGroupMark() {
         return averageGroupMark;
@@ -42,7 +41,6 @@ public class Group {
     }
 
     public void calculateBadAndGoodStudents() {
-
         List<Student> students = new ArrayList<>();
         students.add(firstStudent);
         students.add(secondStudent);
