@@ -3,9 +3,13 @@ package by.epam.com.java;
 import by.epam.com.java.lessons.first.LessonOnePartOne;
 import by.epam.com.java.lessons.first.LessonOnePartTwo;
 import by.epam.com.java.lessons.fourth.LessonFourPartOne;
+import by.epam.com.java.lessons.fourth.LessonFourPartTwo.Customer;
+import by.epam.com.java.lessons.fourth.LessonFourPartTwo.Student;
 import by.epam.com.java.lessons.second.LessonTwoPartOne;
 import by.epam.com.java.lessons.second.LessonTwoPartTwo;
 import by.epam.com.java.lessons.third.LessonThreePartOne;
+import by.epam.com.java.lessons.third.LessonThreePartTwo.Fraction;
+import by.epam.com.java.lessons.third.LessonThreePartTwo.Group;
 
 public class Runner {
 
@@ -16,7 +20,7 @@ public class Runner {
     static LessonThreePartOne lThreePartOne;
 
     public static void main(String[] args) {
-/*
+
         int sum = 0;
         for (int i = 0; i < args.length; i++) {
             int value = Integer.parseInt(args[i]);
@@ -82,9 +86,18 @@ public class Runner {
 
         LessonFourPartOne.twoDimensionalFibonachiArray(5,
                 5); // 1. Инициализировать массив, в котором следующюй элемент равер сумме двух предыдущих
-     */
+
         LessonFourPartOne
-                .sortTwoDimensionalArrayByColumn(); // 2. Создайте массив массивов с одинаковым количеством элментов в каждой строке. Отсортируйте элементы этого массива ‘по столбикам’.
+               .sortTwoDimensionalArrayByColumn(); // 2. Создайте массив массивов с одинаковым количеством элментов в каждой строке. Отсортируйте элементы этого массива ‘по столбикам’.
+
+        // <---- Lesson four part two ---->
+
+        Student student = new Student();  // 1. Создать описанные ниже классы. Определить конструктор и методы set(), get(), show().
+        student.show();                   // ... Определить дополнительно какой – либо  метод для каждого класса...
+        student.showOnlyMathFacultyStudents();   // ... Задать критерий выбора данных и вывести эти данные на консоль.
+        Customer customer = new Customer();
+        customer.show();
+        customer.showCustomersFromMinsk();
 
     }
 
