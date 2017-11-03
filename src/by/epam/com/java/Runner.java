@@ -2,11 +2,10 @@ package by.epam.com.java;
 
 import by.epam.com.java.lessons.first.LessonOnePartOne;
 import by.epam.com.java.lessons.first.LessonOnePartTwo;
+import by.epam.com.java.lessons.fourth.LessonFourPartOne;
 import by.epam.com.java.lessons.second.LessonTwoPartOne;
 import by.epam.com.java.lessons.second.LessonTwoPartTwo;
 import by.epam.com.java.lessons.third.LessonThreePartOne;
-import by.epam.com.java.lessons.third.LessonThreePartTwo.Fraction;
-import by.epam.com.java.lessons.third.LessonThreePartTwo.Group;
 
 public class Runner {
 
@@ -16,9 +15,8 @@ public class Runner {
     static LessonTwoPartTwo lTPartTwo;
     static LessonThreePartOne lThreePartOne;
 
-
     public static void main(String[] args) {
-
+/*
         int sum = 0;
         for (int i = 0; i < args.length; i++) {
             int value = Integer.parseInt(args[i]);
@@ -78,8 +76,13 @@ public class Runner {
          Group group = new Group(); // 2. Определить: а) средний балл учебной группы (использовать класс Group); ...
          group.createStudentsGroup(); // .. б) средний балл каждого студента; в) число отличников; ...
          group.calculateBadAndGoodStudents();  // ... количество студентов, имеющих "2"
-    }
 
+*/
+        // <---- Lesson four part one ---->
+       // LessonFourPartOne.twoDimensionalFibonachiArray(5,5);
+        LessonFourPartOne.sortTwoDimensionalArrayByColumn();
+
+    }
 
 }
 

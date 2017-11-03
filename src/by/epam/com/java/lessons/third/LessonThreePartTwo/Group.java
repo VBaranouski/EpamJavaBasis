@@ -24,12 +24,12 @@ public class Group {
         Group.averageGroupMark = averageGroupMark;
     }
 
-    private Student firstStudent = new Student();
-    private Student secondStudent = new Student();
-    private Student thirdStudent = new Student();
-    private Student fourthStudent = new Student();
-    private Student fivesStudent = new Student();
-    private Student sixthStudent = new Student();
+    Student firstStudent = new Student();
+    Student secondStudent = new Student();
+    Student thirdStudent = new Student();
+    Student fourthStudent = new Student();
+    Student fivesStudent = new Student();
+    Student sixthStudent = new Student();
 
     public void createStudentsGroup() {
         firstStudent.studentsDefiner(firstStudent, new int[] { 10, 8, 10, 9, 8 });
