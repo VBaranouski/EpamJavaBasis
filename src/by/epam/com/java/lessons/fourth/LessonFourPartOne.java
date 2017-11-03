@@ -73,7 +73,7 @@ public class LessonFourPartOne {
 
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length - 1; j++) {
-                for (int m = 0; m < arr[i].length; m++) {
+                for (int m = 0; m < arr.length; m++) {
                     if (arr[j][m] > arr[j + 1][m]) {
                         int temp = arr[j][m];
                         arr[j][m] = arr[j + 1][m];
