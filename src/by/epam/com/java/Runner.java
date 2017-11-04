@@ -3,6 +3,7 @@ package by.epam.com.java;
 import by.epam.com.java.lessons.first.LessonOnePartOne;
 import by.epam.com.java.lessons.first.LessonOnePartTwo;
 import by.epam.com.java.lessons.fourth.LessonFourPartOne;
+import by.epam.com.java.lessons.fourth.LessonFourPartTwo.Abiturient;
 import by.epam.com.java.lessons.fourth.LessonFourPartTwo.Customer;
 import by.epam.com.java.lessons.fourth.LessonFourPartTwo.Student;
 import by.epam.com.java.lessons.second.LessonTwoPartOne;
@@ -10,6 +11,8 @@ import by.epam.com.java.lessons.second.LessonTwoPartTwo;
 import by.epam.com.java.lessons.third.LessonThreePartOne;
 import by.epam.com.java.lessons.third.LessonThreePartTwo.Fraction;
 import by.epam.com.java.lessons.third.LessonThreePartTwo.Group;
+
+import java.util.List;
 
 public class Runner {
 
@@ -99,7 +102,14 @@ public class Runner {
         customer.show();
         customer.showCustomersFromMinsk();
 
+        Abiturient abiturient = new Abiturient(); // 4. Имеется список абитуриентов (класс Abiturient) и список оценок, ...
+        List arr = abiturient.createAbiturients(); //... полученных ими на вступительных экзаменах. ...
+        abiturient.calculateAverageMark(arr);   // ... Напечатать список поступивших, ...
+        abiturient.selectPassedAbiturients(arr);  // ... если число мест меньше числа абитуриентов.
+        abiturient.showPassedAbiturients(arr);
+
     }
 
 }
+
 

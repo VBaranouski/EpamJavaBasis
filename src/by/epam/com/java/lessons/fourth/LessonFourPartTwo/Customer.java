@@ -92,7 +92,7 @@ public class Customer {
 
     public void show() {
         List<Customer> arrayCustomers = createCustomers();
-        System.out.println("List of our customers: ");
+        System.out.println("\n" + "List of our customers: ");
         for (Customer customer : arrayCustomers) {
             System.out.println(
                     customer.getId() + " " + customer.getFirstName() + " " + customer.getLastName() + " " + customer

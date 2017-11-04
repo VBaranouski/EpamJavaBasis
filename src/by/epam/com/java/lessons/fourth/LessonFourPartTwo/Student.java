@@ -116,7 +116,7 @@ public class Student {
 
     public void show() {
         List<Student> arrayStudent = createStudent();
-        System.out.println("List of our students: ");
+        System.out.println("\n" + "List of our students: ");
         for (Student arr : arrayStudent) {
             System.out.println(
                     arr.getId() + " " + arr.getCourseNumber() + " " + arr.getFaculty() + " " + arr.getFirstName() + " "
