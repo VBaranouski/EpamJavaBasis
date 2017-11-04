@@ -54,12 +54,12 @@ public class LessonFourPartOne {
 
     }
 
-    public static int[][] createTwoDimensionalArray(int rows, int column) {
+    private static int[][] createTwoDimensionalArray(int rows, int column) {
         int arr[][] = new int[rows][column];
         Random random = new Random();
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
-                arr[i][j] = random.nextInt(25);
+                arr[i][j] = random.nextInt(35);
                 System.out.print(arr[i][j] + " ");
             }
             System.out.println();
@@ -72,8 +72,8 @@ public class LessonFourPartOne {
         System.out.println("\n" + "Sorted array:");
 
         for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr.length - 1; j++) {
-                for (int m = 0; m < arr.length; m++) {
+            for (int j = 0; j < arr.length-1; j++) {
+                for (int m = 0; m < arr[i].length; m++) {
                     if (arr[j][m] > arr[j + 1][m]) {
                         int temp = arr[j][m];
                         arr[j][m] = arr[j + 1][m];
