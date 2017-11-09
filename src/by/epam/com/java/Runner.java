@@ -93,7 +93,7 @@ public class Runner {
         LessonFourPartOne
                .sortTwoDimensionalArrayByColumn(); // 2. Создайте массив массивов с одинаковым количеством элментов в каждой строке. Отсортируйте элементы этого массива ‘по столбикам’.
 
-        // <---- Lesson four part two ---->
+        // <---- Lesson four part two & Lesson five part one---->
 
         Student student = new Student();  // 1. Создать описанные ниже классы. Определить конструктор и методы set(), get(), show().
         student.show();                   // ... Определить дополнительно какой – либо  метод для каждого класса...
@@ -106,7 +106,7 @@ public class Runner {
         List arr = abiturient.createAbiturients(); //... полученных ими на вступительных экзаменах. ...
         abiturient.calculateAverageMark(arr);   // ... Напечатать список поступивших, ...
         abiturient.selectPassedAbiturients(arr);  // ... если число мест меньше числа абитуриентов.
-        abiturient.showPassedAbiturients(arr);
+        abiturient.showPassedAbiturients(arr);   // 5. Переопределите для данных классов методы equals  и hashCode
 
     }
 
