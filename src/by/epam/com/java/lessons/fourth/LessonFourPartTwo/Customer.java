@@ -101,13 +101,47 @@ public class Customer {
         }
     }
 
-    public void showCustomersFromMinsk(){
+    public void showCustomersFromMinsk() {
         List<Customer> arrayCustomers = createCustomers();
         System.out.println("\n" + "Customers from Minsk: ");
         for (Customer customer : arrayCustomers) {
             if (customer.getAddress().equals("Minsk"))
-            System.out.println(
-                    customer.getId() + " " + customer.getFirstName() + " " + customer.getLastName());
+                System.out.println(
+                        customer.getId() + " " + customer.getFirstName() + " " + customer.getLastName());
         }
+    }
+
+    @Override public boolean equals(Object other) {
+        if (this == other)
+            return true;
+        if (other == null || getClass() != other.getClass())
+            return false;
+
+        Customer customer = (Customer) other;
+
+        if (id != customer.id)
+            return false;
+        if (bankAccountNumber != customer.bankAccountNumber)
+            return false;
+        if (!lastName.equals(customer.lastName))
+            return false;
+        if (!firstName.equals(customer.firstName))
+            return false;
+        if (!surName.equals(customer.surName))
+            return false;
+        if (!address.equals(customer.address))
+            return false;
+        return creditCardNumber.equals(customer.creditCardNumber);
+    }
+
+    @Override public int hashCode() {
+        int result = id;
+        result = 31 * result + lastName.hashCode();
+        result = 31 * result + firstName.hashCode();
+        result = 31 * result + surName.hashCode();
+        result = 31 * result + address.hashCode();
+        result = 31 * result + creditCardNumber.hashCode();
+        result = 31 * result + bankAccountNumber;
+        return result;
     }
 }

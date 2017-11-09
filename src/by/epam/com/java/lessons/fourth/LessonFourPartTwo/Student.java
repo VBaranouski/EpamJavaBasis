@@ -134,5 +134,45 @@ public class Student {
             }
         }
     }
+
+    @Override public boolean equals(Object other) {
+        if (this == other)
+            return true;
+        if (other == null || getClass() != other.getClass())
+            return false;
+
+        Student student = (Student) other;
+
+        if (id != student.id)
+            return false;
+        if (courseNumber != student.courseNumber)
+            return false;
+        if (!lastName.equals(student.lastName))
+            return false;
+        if (!firstName.equals(student.firstName))
+            return false;
+        if (!surName.equals(student.surName))
+            return false;
+        if (!dateOfBirth.equals(student.dateOfBirth))
+            return false;
+        if (!address.equals(student.address))
+            return false;
+        if (!phoneNumber.equals(student.phoneNumber))
+            return false;
+        return faculty.equals(student.faculty);
+    }
+
+    @Override public int hashCode() {
+        int result = id;
+        result = 31 * result + courseNumber;
+        result = 31 * result + lastName.hashCode();
+        result = 31 * result + firstName.hashCode();
+        result = 31 * result + surName.hashCode();
+        result = 31 * result + dateOfBirth.hashCode();
+        result = 31 * result + address.hashCode();
+        result = 31 * result + phoneNumber.hashCode();
+        result = 31 * result + faculty.hashCode();
+        return result;
+    }
 }
 
