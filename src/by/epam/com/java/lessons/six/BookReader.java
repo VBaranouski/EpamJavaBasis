@@ -43,6 +43,7 @@ public class BookReader {
             book.setYear(Integer.parseInt(fields[2]));
             booksCollection.add(book);
         }
+
         return booksCollection;
 
     }
