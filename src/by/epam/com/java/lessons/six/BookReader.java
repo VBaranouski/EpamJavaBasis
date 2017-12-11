@@ -8,7 +8,7 @@ import java.util.List;
 
 public class BookReader {
 
-    private static final String fileName = "src/books.txkt";
+    private static final String fileName = "src/books.txt";
 
     public List<String> readFile() throws IOException {
 

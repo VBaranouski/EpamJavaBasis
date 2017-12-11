@@ -11,7 +11,7 @@ public class Library {
         book.add(new Book("The Shining", "Stephen King", 1977));
         book.add(new Book("It", "Stephen King", 1987));
         book.add(new Book("The Dark Tower VII", "Stephen King", 2005));
-        book.print(book);   //show all books
+        book.printAllBooks(book);   //show all books
 
         Book foundBook = book.findBookByTitle("It");   //find book by title
         if (foundBook == null) {
@@ -19,8 +19,7 @@ public class Library {
         }
 
         book.remove("It");  // remove book by title
-        book.print(book);
-
+        book.printAllBooks(book);
 
         BookReader br = new BookReader();
         List<String> booksFile = br.readFile();  // read books from books.txt file

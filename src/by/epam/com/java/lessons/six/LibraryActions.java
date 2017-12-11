@@ -11,8 +11,8 @@ public class LibraryActions {
         books.add(book);
     }
 
-    public void remove(String title){
-        for (Book bk : books){
+    public void remove(String title) {
+        for (Book bk : books) {
             if (bk.getTitle().equals(title)) {
                 books.remove(bk);
             }
@@ -23,7 +23,7 @@ public class LibraryActions {
         for (Book book : books) {
             if (book.getTitle().equals(title)) {
                 System.out.println("\n" + "Found book: ");
-                print(book);
+                printBook(book);
                 return book;
             }
         }
@@ -34,15 +34,15 @@ public class LibraryActions {
         return books;
     }
 
-    public void print(LibraryActions book) {
+    public void printAllBooks(LibraryActions book) {
         System.out.println("\n" + "Library collection: ");
         List<Book> showBooks = book.getBooks();
         for (Book bk : showBooks) {
-            print(bk);
+            printBook(bk);
         }
     }
 
-    public void print(Book bk) {
+    public void printBook(Book bk) {
         System.out.println(bk.getTitle() + ", " + bk.getAuthor() + ", " + bk.getYear());
     }
 
