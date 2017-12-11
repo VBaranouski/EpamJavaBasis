@@ -11,6 +11,14 @@ public class LibraryActions {
         books.add(book);
     }
 
+    public void remove(String title){
+        for (Book bk : books){
+            if (bk.getTitle().equals(title)) {
+                books.remove(bk);
+            }
+        }
+    }
+
     public Book findBookByTitle(String title) {
         for (Book book : books) {
             if (book.getTitle().equals(title)) {
@@ -27,6 +35,7 @@ public class LibraryActions {
     }
 
     public void print(LibraryActions book) {
+        System.out.println("\n" + "Library collection: ");
         List<Book> showBooks = book.getBooks();
         for (Book bk : showBooks) {
             print(bk);

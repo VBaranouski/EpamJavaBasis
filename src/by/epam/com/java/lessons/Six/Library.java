@@ -9,8 +9,14 @@ public class Library {
         book.add(new Book("It", "Stephen King", 1987));
         book.add(new Book("The Dark Tower VII", "Stephen King", 2005));
 
-        book.print(book);   //show books
+        book.print(book);   //show all books
 
-        book.findBookByTitle("It");   //find book by title
+        Book foundBook = book.findBookByTitle("It");   //find book by title
+        if (foundBook == null) {
+            System.out.println("\n" + "No such book");
+        }
+
+        book.remove("It");  // remove book by title
+        book.print(book);
     }
 }
