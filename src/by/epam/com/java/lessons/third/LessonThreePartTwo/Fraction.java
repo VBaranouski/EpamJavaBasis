@@ -4,22 +4,22 @@ import java.util.Random;
 
 public class Fraction {
 
-    private static int m;
-    private static int n;
+    private int m;
+    private int n;
 
-    public static int getM() {
+    public int getM() {
         return m;
     }
 
-    public static void setM(int m) {
-        Fraction.m = m;
+    public void setM(int m) {
+        this.m = m;
     }
 
-    public static void setN(int n) {
-        Fraction.n = n;
+    public void setN(int n) {
+        this.n = n;
     }
 
-    public static int getN() {
+    public int getN() {
         return n;
     }
 

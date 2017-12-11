@@ -1,0 +1,49 @@
+package by.epam.com.java.lessons.Six;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class LibraryActions {
+
+    public List<Book> books = new ArrayList<>();
+
+    public void add(Book book) {
+        books.add(book);
+    }
+
+    public void remove(String title){
+        for (Book bk : books){
+            if (bk.getTitle().equals(title)) {
+                books.remove(bk);
+            }
+        }
+    }
+
+    public Book findBookByTitle(String title) {
+        for (Book book : books) {
+            if (book.getTitle().equals(title)) {
+                System.out.println("\n" + "Found book: ");
+                print(book);
+                return book;
+            }
+        }
+        return null;
+    }
+
+    public List<Book> getBooks() {
+        return books;
+    }
+
+    public void print(LibraryActions book) {
+        System.out.println("\n" + "Library collection: ");
+        List<Book> showBooks = book.getBooks();
+        for (Book bk : showBooks) {
+            print(bk);
+        }
+    }
+
+    public void print(Book bk) {
+        System.out.println(bk.getTitle() + ", " + bk.getAuthor() + ", " + bk.getYear());
+    }
+
+}
