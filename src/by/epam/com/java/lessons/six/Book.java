@@ -1,4 +1,4 @@
-package by.epam.com.java.lessons.Six;
+package by.epam.com.java.lessons.six;
 
 public class Book {
 
