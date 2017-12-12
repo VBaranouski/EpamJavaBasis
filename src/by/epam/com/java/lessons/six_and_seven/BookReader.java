@@ -1,4 +1,4 @@
-package by.epam.com.java.lessons.six;
+package by.epam.com.java.lessons.six_and_seven;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -55,6 +55,13 @@ public class BookReader {
 
         }
 
+
+    }
+
+    public void readAndPrint(BookReader br) throws IOException {
+        List<String> booksFile = br.readFile();  // read books from books.txt file
+        List<Book> bookCollection = br.parseBookFile(booksFile);   // parse txt file, and create the collection
+        br.printBooksFromFile(bookCollection);  // show collection
     }
 
 }

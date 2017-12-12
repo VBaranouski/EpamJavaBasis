@@ -1,4 +1,4 @@
-package by.epam.com.java.lessons.six;
+package by.epam.com.java.lessons.six_and_seven;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,20 +11,20 @@ public class LibraryActions {
         books.add(book);
     }
 
-    public void remove(String title) {
-        for (Book bk : books) {
-            if (bk.getTitle().equals(title)) {
-                books.remove(bk);
-            }
-        }
-    }
 
     public Book findBookByTitle(String title) {
         for (Book book : books) {
             if (book.getTitle().equals(title)) {
-                System.out.println("\n" + "Found book: ");
-                printBook(book);
                 return book;
+            }
+        }
+        return null;
+    }
+
+    public List<Book> findBookByAuthor(String author) {
+        for (Book book : books) {
+            if (book.getAuthor().equals(author)) {
+                return books;
             }
         }
         return null;
@@ -42,8 +42,18 @@ public class LibraryActions {
         }
     }
 
-    public void printBook(Book bk) {
-        System.out.println(bk.getTitle() + ", " + bk.getAuthor() + ", " + bk.getYear());
+    public void printBook(Book book) {
+        System.out.println("\n" + "Found book: ");
+        System.out.println(book.getTitle() + ", " + book.getAuthor() + ", " + book.getYear());
+
+    }
+
+    public void printBook(List<Book> foundBooks) {
+        System.out.println("\n" + "Found books: ");
+        for (Book bk : foundBooks) {
+            System.out.println(bk.getTitle() + ", " + bk.getAuthor() + ", " + bk.getYear());
+        }
+
     }
 
 }
