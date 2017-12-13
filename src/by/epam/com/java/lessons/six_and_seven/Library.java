@@ -17,9 +17,9 @@ public class Library {
         book.printBook(foundBook);
 
         List<Book> foundBooks = book.findBookByAuthor("Stephen King");
-        book.printBook(foundBooks, true);
+        book.printBook(foundBooks, true);    //find books by author and sort by year if true.
 
         BookReader reader = new BookReader();
-        reader.readAndPrint(reader);
+        reader.readAndPrint(reader);    // reading from file (Lesson 6 part 2)
     }
 }
