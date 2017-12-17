@@ -21,34 +21,34 @@ public class Handler {
 
     public void defineAction(int actionNumber) throws IOException {
 
-        NoteFunctions noteFunctions = new NoteFunctions();
+        NotepadFunctions notepadFunctions = new NotepadFunctions();
         Handler handler = new Handler();
         NotesFileReaderAndWriter writer = new NotesFileReaderAndWriter();
 
         switch (actionNumber) {
         case 1:
             System.out.println("Enter the text body of Note");
-            noteFunctions.addNote(handler.takeStringFromUser());
+            notepadFunctions.addNote(handler.takeStringFromUser());
             break;
         case 2:
             // remove Note
             System.out.println("Remove notes which contain next text: ");
-            List<Notes> notes = noteFunctions.removeNote(handler.takeStringFromUser());
+            List<Notes> notes = notepadFunctions.removeNote(handler.takeStringFromUser());
             writer.overrideFile(notes);
             break;
         case 3:
             // show notes by date
             System.out.println("Enter date in dd.MM.yyyy 'at' hh:mm:ss format");
-            noteFunctions.showFoundNotes(noteFunctions.findNoteByDate(handler.takeStringFromUser()));
+            notepadFunctions.showFoundNotes(notepadFunctions.findNoteByDate(handler.takeStringFromUser()));
             break;
         case 4:
             //show notes by text
             System.out.println("Type required text");
-            noteFunctions.showFoundNotes(noteFunctions.findNoteByText(handler.takeStringFromUser()));
+            notepadFunctions.showFoundNotes(notepadFunctions.findNoteByText(handler.takeStringFromUser()));
             break;
         case 5:
             // show all notes
-            noteFunctions.showAllNotes();
+            notepadFunctions.showAllNotes();
             break;
         case 6:
             // delete All notes
@@ -57,7 +57,7 @@ public class Handler {
             break;
         case 7:
             // exit
-            System.out.println("Thank you! Bye bye");
+            System.out.println("Thank you! Bye");
             break;
 
         default:
@@ -67,16 +67,16 @@ public class Handler {
     }
 
     public void deleteDefiner(String answer) throws IOException {
-        NoteFunctions noteFunctions = new NoteFunctions();
+        NotepadFunctions notepadFunctions = new NotepadFunctions();
         switch (answer) {
         case "Yes":
-            noteFunctions.removeAllNotes();
+            notepadFunctions.removeAllNotes();
             break;
         case "No":
-            System.out.println("Cancelled. Thank you! Bye bye");
+            System.out.println("Cancelled. Thank you! Bye");
             break;
         default:
-            System.out.println("Incorrect word. Please repeat action");
+            System.out.println("Incorrect word. Please repeat an action.");
             break;
         }
     }
