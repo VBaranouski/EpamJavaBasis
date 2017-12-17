@@ -9,21 +9,21 @@ import java.util.List;
 
 public class NoteFunctions {
 
-    NotesReaderAndWriter reader = new NotesReaderAndWriter();
+    NotesFileReaderAndWriter reader = new NotesFileReaderAndWriter();
 
     public void showAllNotes() throws IOException {
         List<Notes> noteCollection = reader.parseNotesFile(reader.readFile());
         reader.printNotesFromFile(noteCollection);
     }
 
-    public void printFoundNotes(List<Notes> foundNotes) {
+    public void showFoundNotes(List<Notes> foundNotes) {
         if (!foundNotes.isEmpty()) {
             System.out.println("\n" + "Found notes: ");
             for (Notes note : foundNotes) {
                 System.out.println(note);
             }
         } else {
-            System.out.println("\n" + "No notes with such date or text were found");
+            System.out.println("\n" + "No notes with such date or text were found.");
         }
     }
 
@@ -50,18 +50,27 @@ public class NoteFunctions {
     }
 
     public List<Notes> removeNote(String text) throws IOException {
+        int i = 0;
+
         List<Notes> noteCollection = reader.parseNotesFile(reader.readFile());
         for (Iterator<Notes> iterator = noteCollection.iterator(); iterator.hasNext(); ) {
             Notes value = iterator.next();
-            if (value.getTextNote().contains(text)) {
+            if (value.getTextNote().contains(text) && text != null) {
+                i++;
                 iterator.remove();
             }
         }
+        if (i > 0) {
+            System.out.println("Note has been removed!\n");
+        } else {
+            System.out.println("Notes are not found.\n");
+        }
+
         return noteCollection;
     }
 
     public void removeAllNotes() throws IOException {
-        BufferedWriter bw = new BufferedWriter(new FileWriter("src/notes.txt"));
+        BufferedWriter bw = new BufferedWriter(new FileWriter(NotepadConstants.FILENAME));
         bw.write(" ");
         bw.newLine();
         bw.close();
@@ -69,10 +78,9 @@ public class NoteFunctions {
 
     }
 
-
     public void addNote(String text) throws IOException {
         Notes note = new Notes(text);
-        reader.noteWriterToFile(note);
+        reader.writerNotesToFile(note);
 
     }
 }

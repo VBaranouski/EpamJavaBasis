@@ -4,14 +4,12 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NotesReaderAndWriter {
-
-    private static final String FILENAME = "src/notes.txt";
+public class NotesFileReaderAndWriter {
 
     public List<String> readFile() throws IOException {
         List<String> notes = new ArrayList<>();
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(FILENAME));
+            BufferedReader reader = new BufferedReader(new FileReader(NotepadConstants.FILENAME));
             String line;
             while ((line = reader.readLine()) != null) {
                 notes.add(line);
@@ -19,7 +17,7 @@ public class NotesReaderAndWriter {
             reader.close();
 
         } catch (Exception e) {
-            System.err.format("Exception occurred trying to read: ", FILENAME);
+            System.err.format("Exception occurred trying to read: ", NotepadConstants.FILENAME);
             e.printStackTrace();
             return null;
         }
@@ -37,14 +35,15 @@ public class NotesReaderAndWriter {
                 note.setTime(fields[0]);
                 note.setTextNote(fields[1]);
                 notesCollection.add(note);
-            } catch (ArrayIndexOutOfBoundsException e) { }
+            } catch (ArrayIndexOutOfBoundsException e) {
+            }
         }
         return notesCollection;
     }
 
     public void printNotesFromFile(List<Notes> note) {
         if (!note.isEmpty()) {
-            System.out.println("\n" + "All notes: ");
+            System.out.println("\n" + "All Notes: ");
             for (Notes nt : note) {
                 System.out.println(nt);
             }
@@ -53,8 +52,8 @@ public class NotesReaderAndWriter {
         }
     }
 
-    public void noteWriterToFile(Notes note) throws IOException {
-        BufferedWriter bw = new BufferedWriter(new FileWriter(FILENAME, true));
+    public void writerNotesToFile(Notes note) throws IOException {
+        BufferedWriter bw = new BufferedWriter(new FileWriter(NotepadConstants.FILENAME, true));
         note.createDate();
         bw.write(note.getTime() + " - " + note.getTextNote());
         bw.newLine();
@@ -63,13 +62,12 @@ public class NotesReaderAndWriter {
     }
 
     public void overrideFile(List<Notes> note) throws IOException {
-        BufferedWriter bw = new BufferedWriter(new FileWriter(FILENAME));
+        BufferedWriter bw = new BufferedWriter(new FileWriter(NotepadConstants.FILENAME));
         for (Notes nt : note) {
             bw.write(nt.toString());
             bw.newLine();
         }
         bw.close();
-        System.out.println("Note has been removed!\n"); /////@@@@@@@@@@@@@@@@@
 
     }
 
