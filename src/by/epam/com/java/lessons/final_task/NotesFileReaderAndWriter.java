@@ -4,14 +4,12 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NotesReaderAndWriter {
-
-    private static final String FILENAME = "src/notes.txt";
+public class NotesFileReaderAndWriter {
 
     public List<String> readFile() throws IOException {
         List<String> notes = new ArrayList<>();
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(FILENAME));
+            BufferedReader reader = new BufferedReader(new FileReader(NotepadConstants.FILENAME));
             String line;
             while ((line = reader.readLine()) != null) {
                 notes.add(line);
@@ -19,7 +17,7 @@ public class NotesReaderAndWriter {
             reader.close();
 
         } catch (Exception e) {
-            System.err.format("Exception occurred trying to read: ", FILENAME);
+            System.err.format("Exception occurred trying to read: ", NotepadConstants.FILENAME);
             e.printStackTrace();
             return null;
         }
@@ -38,38 +36,39 @@ public class NotesReaderAndWriter {
                 note.setTextNote(fields[1]);
                 notesCollection.add(note);
             } catch (ArrayIndexOutOfBoundsException e) {
-                System.out.println(e);
             }
-
         }
-
         return notesCollection;
     }
 
     public void printNotesFromFile(List<Notes> note) {
         if (!note.isEmpty()) {
-            System.out.println("\n" + "All notes: ");
+            System.out.println("\n" + "All Notes: ");
             for (Notes nt : note) {
-                //   System.out.println(nt.getTime() + " - " + nt.getTextNote());
                 System.out.println(nt);
-
             }
         } else {
             System.out.println("\n" + "Sorry, don't see any notes. Looks like Your Notepad is empty. ");
         }
     }
 
-    public void noteWriter(Notes note) throws IOException {
-        FileWriter fw = new FileWriter(FILENAME, true);
-        BufferedWriter bw = new BufferedWriter(fw);
-
+    public void writerNotesToFile(Notes note) throws IOException {
+        BufferedWriter bw = new BufferedWriter(new FileWriter(NotepadConstants.FILENAME, true));
         note.createDate();
         bw.write(note.getTime() + " - " + note.getTextNote());
         bw.newLine();
-
         bw.close();
-        fw.close();
-        System.out.println("Note created!\n");
+        System.out.println("Note has been created!\n");
+    }
+
+    public void overrideFile(List<Notes> note) throws IOException {
+        BufferedWriter bw = new BufferedWriter(new FileWriter(NotepadConstants.FILENAME));
+        for (Notes nt : note) {
+            bw.write(nt.toString());
+            bw.newLine();
+        }
+        bw.close();
+
     }
 
 }
