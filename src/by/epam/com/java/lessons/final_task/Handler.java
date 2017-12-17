@@ -20,19 +20,25 @@ public class Handler {
     public void defineAction(int actionNumber) throws IOException {
 
         NoteFunctions noteFunctions = new NoteFunctions();
+        Handler handler = new Handler();
 
         switch (actionNumber) {
         case 1:
-            // add Note
+            System.out.println("Enter Text note here");
+            noteFunctions.addNote(handler.takeStringFromUser());
             break;
         case 2:
             // remove Note
             break;
         case 3:
-            // find Note by Date
+            // show notes by date
+            System.out.println("Type required date");
+            noteFunctions.printNotes(noteFunctions.findNoteByDate(handler.takeStringFromUser()));
             break;
         case 4:
-            noteFunctions.printNotes(noteFunctions.findNoteByText("His"));
+            //show notes by text
+            System.out.println("Type required text");
+            noteFunctions.printNotes(noteFunctions.findNoteByText(handler.takeStringFromUser()));
             break;
         case 5:
             // show all notes
@@ -60,8 +66,19 @@ public class Handler {
             System.out.println("Please type an integer value. Re-run program and try again!");
 
         }
-        scanner.close();
+
         return number;
+
+    }
+
+    public String takeStringFromUser(){
+
+        Scanner scanner = new Scanner(System.in);
+        String textLine = scanner.nextLine();
+
+        scanner.close();
+        return textLine;
+
 
     }
 

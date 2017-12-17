@@ -10,8 +10,5 @@ public class Notepad {
         handler.showGreetingsText();
         handler.defineAction(handler.takeNumberFromUser());
 
-
-
-
     }
 }
