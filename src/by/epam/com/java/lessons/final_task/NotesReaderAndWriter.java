@@ -37,12 +37,8 @@ public class NotesReaderAndWriter {
                 note.setTime(fields[0]);
                 note.setTextNote(fields[1]);
                 notesCollection.add(note);
-            } catch (ArrayIndexOutOfBoundsException e) {
-                System.out.println(e);
-            }
-
+            } catch (ArrayIndexOutOfBoundsException e) { }
         }
-
         return notesCollection;
     }
 
@@ -50,26 +46,31 @@ public class NotesReaderAndWriter {
         if (!note.isEmpty()) {
             System.out.println("\n" + "All notes: ");
             for (Notes nt : note) {
-                //   System.out.println(nt.getTime() + " - " + nt.getTextNote());
                 System.out.println(nt);
-
             }
         } else {
             System.out.println("\n" + "Sorry, don't see any notes. Looks like Your Notepad is empty. ");
         }
     }
 
-    public void noteWriter(Notes note) throws IOException {
-        FileWriter fw = new FileWriter(FILENAME, true);
-        BufferedWriter bw = new BufferedWriter(fw);
-
+    public void noteWriterToFile(Notes note) throws IOException {
+        BufferedWriter bw = new BufferedWriter(new FileWriter(FILENAME, true));
         note.createDate();
         bw.write(note.getTime() + " - " + note.getTextNote());
         bw.newLine();
-
         bw.close();
-        fw.close();
-        System.out.println("Note created!\n");
+        System.out.println("Note has been created!\n");
+    }
+
+    public void overrideFile(List<Notes> note) throws IOException {
+        BufferedWriter bw = new BufferedWriter(new FileWriter(FILENAME));
+        for (Notes nt : note) {
+            bw.write(nt.toString());
+            bw.newLine();
+        }
+        bw.close();
+        System.out.println("Note has been removed!\n"); /////@@@@@@@@@@@@@@@@@
+
     }
 
 }
