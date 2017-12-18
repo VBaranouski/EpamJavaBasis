@@ -75,6 +75,7 @@ public class Handler {
         case "No":
             System.out.println("Cancelled. Thank you! Bye");
             break;
+
         default:
             System.out.println("Incorrect word. Please repeat an action.");
             break;
@@ -92,11 +93,14 @@ public class Handler {
 
     }
 
-    public String takeStringFromUser() {
+    public String takeStringFromUser() throws IOException {
 
         Scanner scanner = new Scanner(System.in);
         String textLine = scanner.nextLine();
-
+        if (textLine.isEmpty()) {
+            System.out.println("Text field cannot be empty. Please try again");
+            takeStringFromUser();
+        }
         scanner.close();
         return textLine;
 
