@@ -55,7 +55,7 @@ public class NotepadFunctions {
         List<Notes> noteCollection = reader.parseNotesFile(reader.readFile());
         for (Iterator<Notes> iterator = noteCollection.iterator(); iterator.hasNext(); ) {
             Notes value = iterator.next();
-            if (value.getTextNote().contains(text) && text != null) {
+            if (value.getTextNote().contains(text)) {
                 i++;
                 iterator.remove();
             }
