@@ -39,8 +39,33 @@ public class Notes {
 
     }
 
+    public void createYear() {
+        Date date = new Date();
+        SimpleDateFormat ft = new SimpleDateFormat("dd.MM.yyyy");
+        setTime(ft.format(date).toString());
+    }
+
     @Override public String toString() {
         return time + " - " + textNote;
+    }
+
+    @Override public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (!(o instanceof Notes))
+            return false;
+
+        Notes notes = (Notes) o;
+
+        if (getTextNote() != null ? !getTextNote().equals(notes.getTextNote()) : notes.getTextNote() != null)
+            return false;
+        return getTime() != null ? getTime().equals(notes.getTime()) : notes.getTime() == null;
+    }
+
+    @Override public int hashCode() {
+        int result = getTextNote() != null ? getTextNote().hashCode() : 0;
+        result = 31 * result + (getTime() != null ? getTime().hashCode() : 0);
+        return result;
     }
 }
 

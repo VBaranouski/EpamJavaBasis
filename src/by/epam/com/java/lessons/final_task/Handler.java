@@ -6,6 +6,10 @@ import java.util.Scanner;
 
 public class Handler {
 
+    NotepadFunctions notepadFunctions = new NotepadFunctions();
+    Handler handler = new Handler();
+    NotesFileReaderAndWriter writer = new NotesFileReaderAndWriter();
+
     public void showGreetingsText() {
         System.out.println("\n" + "Welcome to the NotePad app. Please select an necessary action below: " + "\n"
                 + "\n" + "1. Add a new Note "
@@ -20,10 +24,6 @@ public class Handler {
     }
 
     public void defineAction(int actionNumber) throws IOException {
-
-        NotepadFunctions notepadFunctions = new NotepadFunctions();
-        Handler handler = new Handler();
-        NotesFileReaderAndWriter writer = new NotesFileReaderAndWriter();
 
         switch (actionNumber) {
         case 1:
@@ -67,7 +67,6 @@ public class Handler {
     }
 
     public void deleteDefiner(String answer) throws IOException {
-        NotepadFunctions notepadFunctions = new NotepadFunctions();
         switch (answer) {
         case "Yes":
             notepadFunctions.removeAllNotes();
